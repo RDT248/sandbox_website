@@ -10,7 +10,7 @@ const WelcomePage = () => {
         </div>
         <h1 className="welcome-title">Welcome!</h1>
         <p className="welcome-message">
-          We're glad to have you here. Explore and enjoy your stay.
+          I'm glad to have you here. Explore and enjoy your stay.
         </p>
         <button className="cta-button">Let's Connect!</button>
       </div>
