@@ -1,30 +1,21 @@
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
 import logo from './logo.svg';
 import './App.css';
 import WelcomePage from './components/WelcomePage';
+import AboutMe from './components/AboutMe';
 
 function App() {
+  console.log('Base URL:', process.env.PUBLIC_URL);
   return (
-    <div className="App">
-      <WelcomePage />
-    </div>
+    <Router basename={process.env.PUBLIC_URL}>
+      <Routes>
+        <Route path="/" element={<WelcomePage />} />
+        <Route path="/about" element={<AboutMe />} />
+      </Routes>
+    </Router>
     // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <p>
-    //       Edit compelte
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
+    //   <AboutMe />
     // </div>
   );
 }
